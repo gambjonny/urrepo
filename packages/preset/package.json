@@ -10,7 +10,8 @@
     "styling"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest"
   },
   "license": "ISC",
   "engines": {

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "a basic monorepo setup",
   "scripts": {
-    "build:all": "tsc -b packages/**/*"
+    "build:all": "tsc -b packages/**/*",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "Jonny Gamba",
