@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "a basic monorepo setup",
   "scripts": {
-    "build": "tsc -b packages/*"
+    "build:all": "tsc -b packages/**/*"
   },
   "keywords": [],
   "author": "Jonny Gamba",
@@ -24,6 +24,8 @@
   "devDependencies": {
     "@pandacss/dev": "^0.51.1",
     "@types/node": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "@vitest/ui": "catalog:",
+    "vitest": "catalog:"
   }
 }

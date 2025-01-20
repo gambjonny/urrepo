@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "${configDir}/dist",
     "sourceMap": true,
     "target": "ESNext",
     "module": "ESNext",
