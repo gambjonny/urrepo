@@ -4,15 +4,37 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@types/node':
+      specifier: ^22.10.7
+      version: 22.10.7
+    typescript:
+      specifier: ^5.7.2
+      version: 5.7.3
+
 importers:
 
   .:
     devDependencies:
       '@pandacss/dev':
         specifier: ^0.51.1
-        version: 0.51.1(typescript@5.6.2)
+        version: 0.51.1(typescript@5.7.3)
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.10.7
+      typescript:
+        specifier: 'catalog:'
+        version: 5.7.3
 
-  packages/design-system/preset: {}
+  packages/design-system/preset:
+    devDependencies:
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.10.7
+      typescript:
+        specifier: 'catalog:'
+        version: 5.7.3
 
 packages:
 
@@ -260,6 +282,9 @@ packages:
 
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+
+  '@types/node@22.10.7':
+    resolution: {integrity: sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==}
 
   '@vue/compiler-core@3.4.19':
     resolution: {integrity: sha512-gj81785z0JNzRcU0Mq98E56e4ltO1yf8k5PQ+tV/7YHnbZkrM0fyFyuttnN8ngJZjbpofWE/m4qjKBiLl8Ju4w==}
@@ -780,8 +805,16 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@5.7.3:
+    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
+
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -955,13 +988,13 @@ snapshots:
       postcss-selector-parser: 6.1.2
       ts-pattern: 5.0.8
 
-  '@pandacss/dev@0.51.1(typescript@5.6.2)':
+  '@pandacss/dev@0.51.1(typescript@5.7.3)':
     dependencies:
       '@clack/prompts': 0.7.0
       '@pandacss/config': 0.51.1
       '@pandacss/logger': 0.51.1
-      '@pandacss/node': 0.51.1(typescript@5.6.2)
-      '@pandacss/postcss': 0.51.1(typescript@5.6.2)
+      '@pandacss/node': 0.51.1(typescript@5.7.3)
+      '@pandacss/postcss': 0.51.1(typescript@5.7.3)
       '@pandacss/preset-panda': 0.51.1
       '@pandacss/shared': 0.51.1
       '@pandacss/token-dictionary': 0.51.1
@@ -971,10 +1004,10 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/extractor@0.51.1(typescript@5.6.2)':
+  '@pandacss/extractor@0.51.1(typescript@5.7.3)':
     dependencies:
       '@pandacss/shared': 0.51.1
-      ts-evaluator: 1.2.0(typescript@5.6.2)
+      ts-evaluator: 1.2.0(typescript@5.7.3)
       ts-morph: 24.0.0
     transitivePeerDependencies:
       - jsdom
@@ -1001,13 +1034,13 @@ snapshots:
       '@pandacss/types': 0.51.1
       kleur: 4.1.5
 
-  '@pandacss/node@0.51.1(typescript@5.6.2)':
+  '@pandacss/node@0.51.1(typescript@5.7.3)':
     dependencies:
       '@pandacss/config': 0.51.1
       '@pandacss/core': 0.51.1
       '@pandacss/generator': 0.51.1
       '@pandacss/logger': 0.51.1
-      '@pandacss/parser': 0.51.1(typescript@5.6.2)
+      '@pandacss/parser': 0.51.1(typescript@5.7.3)
       '@pandacss/reporter': 0.51.1
       '@pandacss/shared': 0.51.1
       '@pandacss/token-dictionary': 0.51.1
@@ -1029,16 +1062,16 @@ snapshots:
       prettier: 3.2.5
       ts-morph: 24.0.0
       ts-pattern: 5.0.8
-      tsconfck: 3.0.2(typescript@5.6.2)
+      tsconfck: 3.0.2(typescript@5.7.3)
     transitivePeerDependencies:
       - jsdom
       - typescript
 
-  '@pandacss/parser@0.51.1(typescript@5.6.2)':
+  '@pandacss/parser@0.51.1(typescript@5.7.3)':
     dependencies:
       '@pandacss/config': 0.51.1
       '@pandacss/core': 0.51.1
-      '@pandacss/extractor': 0.51.1(typescript@5.6.2)
+      '@pandacss/extractor': 0.51.1(typescript@5.7.3)
       '@pandacss/logger': 0.51.1
       '@pandacss/shared': 0.51.1
       '@pandacss/types': 0.51.1
@@ -1050,9 +1083,9 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/postcss@0.51.1(typescript@5.6.2)':
+  '@pandacss/postcss@0.51.1(typescript@5.7.3)':
     dependencies:
-      '@pandacss/node': 0.51.1(typescript@5.6.2)
+      '@pandacss/node': 0.51.1(typescript@5.7.3)
       postcss: 8.4.49
     transitivePeerDependencies:
       - jsdom
@@ -1094,6 +1127,10 @@ snapshots:
       tinyglobby: 0.2.10
 
   '@types/node@17.0.45': {}
+
+  '@types/node@22.10.7':
+    dependencies:
+      undici-types: 6.20.0
 
   '@vue/compiler-core@3.4.19':
     dependencies:
@@ -1556,12 +1593,12 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  ts-evaluator@1.2.0(typescript@5.6.2):
+  ts-evaluator@1.2.0(typescript@5.7.3):
     dependencies:
       ansi-colors: 4.1.3
       crosspath: 2.0.0
       object-path: 0.11.8
-      typescript: 5.6.2
+      typescript: 5.7.3
 
   ts-morph@24.0.0:
     dependencies:
@@ -1570,13 +1607,17 @@ snapshots:
 
   ts-pattern@5.0.8: {}
 
-  tsconfck@3.0.2(typescript@5.6.2):
+  tsconfck@3.0.2(typescript@5.7.3):
     optionalDependencies:
-      typescript: 5.6.2
+      typescript: 5.7.3
 
   typescript@5.6.2: {}
 
+  typescript@5.7.3: {}
+
   ufo@1.5.4: {}
+
+  undici-types@6.20.0: {}
 
   universalify@2.0.1: {}
 
