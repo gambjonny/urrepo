@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "license": "ISC",
   "engines": {
@@ -19,7 +20,7 @@
     "pnpm": "10.0.0"
   },
   "volta": {
-    "extends": "../../../package.json"
+    "extends": "../../package.json"
   },
   "devDependencies": {
     "@types/node": "catalog:",
