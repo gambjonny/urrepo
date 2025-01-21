@@ -4,7 +4,8 @@
   "description": "a basic monorepo setup",
   "scripts": {
     "build:all": "tsc -b packages/**/*",
-    "test": "vitest"
+    "test:all": "vitest run",
+    "coverage:all": "vitest run --coverage"
   },
   "keywords": [],
   "author": "Jonny Gamba",
@@ -24,9 +25,10 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.51.1",
+    "vitest": "^3.0.3",
+    "@vitest/ui": "^3.0.3",
+    "@vitest/coverage-v8": "^3.0.3",
     "@types/node": "catalog:",
-    "typescript": "catalog:",
-    "@vitest/ui": "catalog:",
-    "vitest": "catalog:"
+    "typescript": "catalog:"
   }
 }
