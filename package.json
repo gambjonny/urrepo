@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "a basic monorepo setup",
   "scripts": {
-    "build:all": "tsc -b packages/**/*",
+    "build:all": "tsc -b",
     "test:all": "vitest run",
     "coverage:all": "vitest run --coverage"
   },
