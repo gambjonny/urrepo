@@ -1,5 +1,6 @@
 {
   "name": "@urrepo/preset",
+  "type": "module",
   "version": "0.0.1",
   "description": "core preset",
   "main": "src/index.ts",
