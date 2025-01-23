@@ -5,6 +5,5 @@ export default defineProject({
     name: "package: Panda preset",
     globals: true,
     environment: "node",
-    dir: "tests",
   },
 });
