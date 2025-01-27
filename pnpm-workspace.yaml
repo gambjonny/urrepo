@@ -5,8 +5,12 @@ catalog:
   react: ^19.0.0
   react-dom: ^19.0.0
   typescript: ^5.7.2
+  eslint: ^9.19.0
+  prettier: ^3.4.2
+  "@pandacss/dev": ^0.51.1
   "@types/node": ^22.10.7
   "@types/react": ^19.0.0
   "@types/react-dom": ^19.0.0
   "@rsbuild/core": ^1.1.8
   "@rsbuild/plugin-react": ^1.0.7
+  "@eslint/js": ^9.19.0
