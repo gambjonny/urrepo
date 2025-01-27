@@ -5,7 +5,8 @@
   "scripts": {
     "build:all": "tsc -b",
     "test:all": "vitest run",
-    "coverage:all": "vitest run --coverage"
+    "coverage:all": "vitest run --coverage",
+    "lint:all": "pnpm -r --no-bail run lint"
   },
   "keywords": [],
   "author": "Jonny Gamba",

@@ -1,3 +1,4 @@
 import pluginJs from "@eslint/js";
 
-export default [pluginJs.configs.recommended];
+/** @type {import('eslint').Linter.Config[]} */
+export default [pluginJs.configs.recommended, { files: ["**/*.ts"] }];
