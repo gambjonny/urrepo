@@ -1,0 +1,25 @@
+{
+  "name": "@urrepo/eslint-config",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "eslint.config.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "engines": {
+    "node": "22.12.0",
+    "pnpm": "10.0.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  },
+  "peerDependencies": {
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}
