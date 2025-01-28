@@ -1,3 +1,3 @@
-import baseConfig from "@urrepo/eslint-config";
+import baseConfig from '@urrepo/eslint-config'
 
-export default [...baseConfig];
+export default [...baseConfig]

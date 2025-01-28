@@ -1,9 +1,9 @@
-import { defineProject } from "vitest/config";
+import { defineProject } from 'vitest/config'
 
 export default defineProject({
   test: {
-    name: "package: Panda preset",
+    name: 'package: Panda preset',
     globals: true,
-    environment: "node",
+    environment: 'node',
   },
-});
+})

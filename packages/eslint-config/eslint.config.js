@@ -24,7 +24,7 @@ export default [
       vitest,
     },
     rules: {
-      ...vitest.configs.recommended.rules,
+      ...vitest.configs.all.rules,
     },
     languageOptions: {
       globals: {

@@ -1,32 +1,32 @@
-import { definePreset } from "@pandacss/dev";
+import { definePreset } from '@pandacss/dev'
 
 const preset = definePreset({
-  name: "core",
+  name: 'core',
   theme: {
     extend: {
       tokens: {
         colors: {
           cobalt: {
             50: {
-              value: "#EBEDF9",
+              value: '#EBEDF9',
             },
             100: {
-              value: "#D3D7EE",
+              value: '#D3D7EE',
             },
             200: {
-              value: "#959CDE",
+              value: '#959CDE',
             },
             300: {
-              value: "#5460C8",
+              value: '#5460C8',
             },
             400: {
-              value: "#1020B9",
+              value: '#1020B9',
             },
           },
         },
       },
     },
   },
-});
+})
 
-export default preset;
+export default preset
