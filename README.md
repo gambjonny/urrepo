@@ -7,3 +7,4 @@
 - add a new 'reference' in in root tsconfig pointing to new package
 - use defineProject instead of defineConfig in vitestconfig
 - prefer using versions of packages from catalog:
+- add eslint.config.js and import a config file from @urrepo/eslint-config package

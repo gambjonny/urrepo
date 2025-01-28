@@ -34,6 +34,7 @@
     "typescript": "catalog:",
     "eslint": "catalog:",
     "@eslint/js": "catalog:",
-    "prettier": "catalog:"
+    "prettier": "catalog:",
+    "@vitest/eslint-plugin": "catalog:"
   }
 }

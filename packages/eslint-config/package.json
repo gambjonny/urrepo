@@ -18,8 +18,9 @@
     "extends": "../../package.json"
   },
   "peerDependencies": {
-    "@eslint/js": "catalog:",
     "eslint": "catalog:",
+    "@eslint/js": "catalog:",
+    "@vitest/eslint-plugin": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   }
