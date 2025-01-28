@@ -14,8 +14,10 @@
     "build": "tsc",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
+    "format:fix": "prettier --ignore-path ../../.prettierignore --write ."
   },
   "license": "ISC",
   "engines": {
@@ -35,6 +37,8 @@
     "eslint": "catalog:",
     "@eslint/js": "catalog:",
     "prettier": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
     "@vitest/eslint-plugin": "catalog:"
   }
 }
