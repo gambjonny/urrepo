@@ -7,7 +7,9 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "echo 'No linting needed for this package'"
+    "lint:check": "echo 'No linting needed for this package'",
+    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
+    "format:fix": "prettier --ignore-path ../../.prettierignore --write ."
   },
   "keywords": [],
   "engines": {
@@ -22,6 +24,8 @@
     "@eslint/js": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
     "prettier": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
     "typescript": "catalog:"
   }
 }

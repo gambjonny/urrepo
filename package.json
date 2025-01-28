@@ -6,7 +6,8 @@
     "build:all": "tsc -b",
     "test:all": "vitest run",
     "coverage:all": "vitest run --coverage",
-    "lint:all": "pnpm -r --no-bail run lint"
+    "format:check:all": "pnpm -r --no-bail run format:check",
+    "lint:check:all": "pnpm -r --no-bail run lint:check"
   },
   "keywords": [],
   "author": "Jonny Gamba",
@@ -32,6 +33,8 @@
     "@vitest/eslint-plugin": "catalog:",
     "@vitest/ui": "^3.0.3",
     "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-prettier": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
     "vitest": "^3.0.3"

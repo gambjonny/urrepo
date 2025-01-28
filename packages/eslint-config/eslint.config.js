@@ -1,19 +1,25 @@
-import pluginJs from "@eslint/js";
-import vitest from "@vitest/eslint-plugin";
+import pluginJs from '@eslint/js'
+import vitest from '@vitest/eslint-plugin'
+import prettier from 'eslint-config-prettier'
+import prettierPlugin from 'eslint-plugin-prettier'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  pluginJs.configs.recommended,
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
+  },
+  pluginJs.configs.recommended,
+  prettier,
+  {
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parserOptions: {
-        project: "./tsconfig.json",
+        project: './tsconfig.json',
       },
     },
   },
   {
-    files: ["tests/**", "**/*.test.ts", "**/*.spec.ts"],
+    files: ['tests/**', '**/*.test.ts', '**/*.spec.ts'],
     plugins: {
       vitest,
     },
@@ -26,4 +32,13 @@ export default [
       },
     },
   },
-];
+  {
+    files: ['**/*.{js,jsx,ts,tsx,md}'],
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      'prettier/prettier': 'error',
+    },
+  },
+]
