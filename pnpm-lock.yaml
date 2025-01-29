@@ -15,9 +15,15 @@ catalogs:
     '@types/node':
       specifier: ^22.10.7
       version: 22.10.7
+    '@vitest/coverage-v8':
+      specifier: ^3.0.3
+      version: 3.0.3
     '@vitest/eslint-plugin':
       specifier: ^1.1.25
       version: 1.1.25
+    '@vitest/ui':
+      specifier: ^3.0.3
+      version: 3.0.3
     eslint:
       specifier: ^9.19.0
       version: 9.19.0
@@ -33,6 +39,9 @@ catalogs:
     typescript:
       specifier: ^5.7.2
       version: 5.7.3
+    vitest:
+      specifier: ^3.0.3
+      version: 3.0.3
 
 importers:
 
@@ -48,13 +57,13 @@ importers:
         specifier: 'catalog:'
         version: 22.10.7
       '@vitest/coverage-v8':
-        specifier: ^3.0.3
+        specifier: 'catalog:'
         version: 3.0.3(vitest@3.0.3)
       '@vitest/eslint-plugin':
         specifier: 'catalog:'
         version: 1.1.25(@typescript-eslint/utils@8.22.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.3)
       '@vitest/ui':
-        specifier: ^3.0.3
+        specifier: 'catalog:'
         version: 3.0.3(vitest@3.0.3)
       eslint:
         specifier: 'catalog:'
@@ -72,7 +81,7 @@ importers:
         specifier: 'catalog:'
         version: 5.7.3
       vitest:
-        specifier: ^3.0.3
+        specifier: 'catalog:'
         version: 3.0.3(@types/node@22.10.7)(@vitest/ui@3.0.3)(jiti@2.4.2)(lightningcss@1.25.1)
 
   packages/eslint-config:
@@ -113,9 +122,15 @@ importers:
       '@urrepo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@vitest/coverage-v8':
+        specifier: 'catalog:'
+        version: 3.0.3(vitest@3.0.3)
       '@vitest/eslint-plugin':
         specifier: 'catalog:'
         version: 1.1.25(@typescript-eslint/utils@8.22.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.3)
+      '@vitest/ui':
+        specifier: 'catalog:'
+        version: 3.0.3(vitest@3.0.3)
       eslint:
         specifier: 'catalog:'
         version: 9.19.0(jiti@2.4.2)
@@ -131,6 +146,9 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
+      vitest:
+        specifier: 'catalog:'
+        version: 3.0.3(@types/node@22.10.7)(@vitest/ui@3.0.3)(jiti@2.4.2)(lightningcss@1.25.1)
 
 packages:
 
