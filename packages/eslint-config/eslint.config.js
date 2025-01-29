@@ -6,7 +6,7 @@ import prettierPlugin from 'eslint-plugin-prettier'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
+    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'], // global ignore
   },
   pluginJs.configs.recommended,
   prettier,
@@ -19,7 +19,7 @@ export default [
     },
   },
   {
-    files: ['tests/**', '**/*.test.ts', '**/*.spec.ts'],
+    files: ['**/*.test.ts', '**/*.spec.ts'],
     plugins: {
       vitest,
     },
