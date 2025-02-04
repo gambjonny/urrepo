@@ -7,7 +7,7 @@ Urrepo is a monorepo template built for projects that need consistency and organ
 - **TypeScript Project References**: Every package extends a shared `tsconfig.base.json` and uses `composite: true` for incremental builds.
 - **Wireit for Automation**: Handles dependencies and caching for scripts like building, testing, and linting.
 - **Centralized ESLint and Prettier Configs**: The `@urrepo/eslint-config` package provides a reusable setup for linting and formatting.
-- **Testing with Vitest**: Each package has its own `vitest.config.ts` to handle tests efficiently.
+- **Testing with Vitest**: Each package has its own `vitest.config.ts` and leverages Vitest workspaces to efficiently run tests across multiple packages in the monorepo.
 - **Pnpm Workspaces**: Keeps dependencies organized and ensures easy linking across packages.
 - **Catalog Dependencies**: Ensures consistent versions of dependencies by referencing a shared `catalog` in `pnpm-workspace.yaml`.
 
