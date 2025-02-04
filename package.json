@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "a basic monorepo setup",
   "scripts": {
-    "build:all": "tsc -b",
+    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
+    "build:all": "tsc -b --clean && tsc -b",
     "test:all": "vitest run",
     "coverage:all": "vitest run --coverage",
-    "format:all": "pnpm -r --no-bail run format:check",
-    "lint:all": "pnpm -r --no-bail run lint:check",
-    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
+    "format:all": "pnpm -r --no-bail run format:check --if-present",
+    "lint:all": "pnpm -r --no-bail run lint:check --if-present"
   },
   "keywords": [],
   "author": "Jonny Gamba",
