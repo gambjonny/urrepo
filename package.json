@@ -43,6 +43,7 @@
     "eslint-plugin-prettier": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
     "vitest": "catalog:",
     "wireit": "^0.14.10"
   },
