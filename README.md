@@ -2,12 +2,38 @@
 
 Urrepo is a monorepo template built for projects that need consistency and organization. It uses a set of modern tools to make working with multiple packages straightforward and predictable.
 
+## Rationale
+
+Most existing monorepo solutions, like **Nx** and **Turborepo**, are designed with enterprise use cases in mind, introducing unnecessary complexity and vendor lock-in. These tools often:
+
+- **Abstract too much**: They introduce proprietary configurations and wrapper commands that make it harder to understand what’s actually happening under the hood.
+- **Encourage heavy dependencies**: Many setups include caching servers, remote execution layers, and proprietary features that aren’t necessary for most projects.
+- **Are built for commercial gain**: Turborepo, for example, started as an open-source project but quickly introduced paid features, making companies dependent on Vercel’s infrastructure.
+- **Follow a “batteries-included” approach**: Many tools try to automate everything, reducing the need for developers to configure their monorepo explicitly. While this can be useful for large teams, it often results in a lack of flexibility and forces developers into rigid workflows.
+
+Urrepo exists because **monorepos don’t need to be complicated**. It provides a lightweight, dependency-free alternative that leverages native tooling like **pnpm workspaces, TypeScript project references, and Wireit**. This makes it:
+
+- **Transparent**: No black-box abstractions—everything works with standard npm scripts and TypeScript.
+- **Fast**: Uses incremental builds and caching without requiring external services.
+- **Flexible**: No vendor lock-in, no hidden magic—just a clean setup that works with any CI/CD pipeline.
+- **Explicit and Developer-Oriented**: Instead of hiding configuration behind proprietary CLI commands, Urrepo ensures that every dependency and automation step is clearly defined, improving maintainability.
+
+### Trade-offs
+
+Urrepo does not abstract many things, which means some manual setup is required. Unlike Nx or Turborepo, which try to automate monorepo management entirely, Urrepo keeps things explicit, allowing for greater control and understanding:
+
+- **TypeScript References**: Each new package must be manually added as a `reference` in the root `tsconfig.json` to ensure project-wide type safety.
+- **Wireit Dependencies**: Since Wireit doesn’t scan the monorepo automatically, dependencies between packages need to be explicitly defined in the root `package.json`.
+- **Vitest Workspaces**: Unlike Nx or Turborepo, which abstract test execution across the monorepo, Urrepo **leverages** Vitest workspaces to ensure efficient test execution while keeping configuration clear.
+
+While this means more manual setup, it also means you **understand exactly how your monorepo is structured**. Nothing is hidden behind custom CLIs or obscure configurations.
+
 ## Features
 
 - **TypeScript Project References**: Every package extends a shared `tsconfig.base.json` and uses `composite: true` for incremental builds.
 - **Wireit for Automation**: Handles dependencies and caching for scripts like building, testing, and linting.
 - **Centralized ESLint and Prettier Configs**: The `@urrepo/eslint-config` package provides a reusable setup for linting and formatting.
-- **Testing with Vitest**: Each package has its own `vitest.config.ts` to handle tests efficiently.
+- **Testing with Vitest**: Each package has its own `vitest.config.ts`, leveraging **Vitest workspaces** for efficient test execution.
 - **Pnpm Workspaces**: Keeps dependencies organized and ensures easy linking across packages.
 - **Catalog Dependencies**: Ensures consistent versions of dependencies by referencing a shared `catalog` in `pnpm-workspace.yaml`.
 
@@ -35,6 +61,7 @@ Urrepo is a monorepo template built for projects that need consistency and organ
    - For shared tools or libraries, use `catalog:` in `package.json` to ensure consistent versions.
 
 5. **Define Wireit Scripts**:
+
    - Add `wireit` configuration in the `package.json` for `build`, `test`, `lint`, and `format` scripts.
 
 ### Scripts
@@ -66,6 +93,34 @@ Urrepo is a monorepo template built for projects that need consistency and organ
 - **TypeScript**: Provides type safety and improves code quality.
 - **Wireit**: Automates script dependencies and enables caching for builds and tests.
 - **ESLint and Prettier**: Keeps code consistent and clean.
-- **Vitest**: A fast and lightweight testing framework.
+- **Vitest**: A fast and lightweight testing framework, leveraging **workspaces** for monorepos.
 - **Pnpm**: Manages dependencies and workspaces efficiently.
 - **PandaCSS**: A utility-first CSS framework for design tokens and styling.
+
+## Configuration Summary
+
+### TypeScript
+
+- Extend `tsconfig.base.json` in all package `tsconfig.json` files.
+- Use `composite: true` for incremental builds.
+- Manually add new package references to the root `tsconfig.json`.
+
+### Wireit
+
+- Add `wireit` configuration in `package.json` for script automation.
+- Define `files` and `output` properties for caching and incremental builds.
+- Manually add dependencies between packages in the root `package.json`.
+
+### Prettier
+
+- Shared configuration is located in `prettier.config.js`.
+- Ignore patterns are defined in `.prettierignore`.
+
+### ESLint
+
+- The `@urrepo/eslint-config` package provides a shared configuration.
+- Extend the base configuration in each package to include relevant rules.
+
+---
+
+The key takeaway is that Urrepo does not assume how you want to structure your monorepo. Instead, it gives you the tools to configure it explicitly, making it a good choice for developers who value clarity over automation.
