@@ -5,6 +5,11 @@
   "description": "",
   "main": "eslint.config.js",
   "types": "index.d.ts",
+  "exports": {
+    "./base": "./eslint.config.js",
+    "import": "./eslint.config.js",
+    "default": "./eslint.config.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:check": "echo 'No linting needed for this package'",
