@@ -23,7 +23,7 @@ Urrepo exists because **monorepos don’t need to be complicated**. It provides 
 Urrepo does not abstract many things, which means some manual setup is required. Unlike Nx or Turborepo, which try to automate monorepo management entirely, Urrepo keeps things explicit, allowing for greater control and understanding:
 
 - **TypeScript References**: Each new package must be manually added as a `reference` in the root `tsconfig.json` to ensure project-wide type safety.
-- **Wireit Dependencies**: Since Wireit doesn’t scan the monorepo automatically, dependencies between packages need to be explicitly defined in the root `package.json`.
+- **Wireit Dependencies**: Since Wireit doesn’t scan the monorepo automatically, dependencies between packages need to be explicitly defined in the root `package.json`. This ensures predictability over auto-discovery mechanisms used in some tools.
 - **Vitest Workspaces**: Unlike Nx or Turborepo, which abstract test execution across the monorepo, Urrepo **leverages** Vitest workspaces to ensure efficient test execution while keeping configuration clear.
 
 While this means more manual setup, it also means you **understand exactly how your monorepo is structured**. Nothing is hidden behind custom CLIs or obscure configurations.
@@ -33,7 +33,7 @@ While this means more manual setup, it also means you **understand exactly how y
 - **TypeScript Project References**: Every package extends a shared `tsconfig.base.json` and uses `composite: true` for incremental builds.
 - **Wireit for Automation**: Handles dependencies and caching for scripts like building, testing, and linting.
 - **Centralized ESLint and Prettier Configs**: The `@urrepo/eslint-config` package provides a reusable setup for linting and formatting.
-- **Testing with Vitest**: Each package has its own `vitest.config.ts`, leveraging **Vitest workspaces** for efficient test execution.
+- **Testing with Vitest 3**: Thanks to **Vitest’s built-in monorepo support**, tests run efficiently across packages while keeping configurations explicit.
 - **Pnpm Workspaces**: Keeps dependencies organized and ensures easy linking across packages.
 - **Catalog Dependencies**: Ensures consistent versions of dependencies by referencing a shared `catalog` in `pnpm-workspace.yaml`.
 
@@ -93,7 +93,7 @@ While this means more manual setup, it also means you **understand exactly how y
 - **TypeScript**: Provides type safety and improves code quality.
 - **Wireit**: Automates script dependencies and enables caching for builds and tests.
 - **ESLint and Prettier**: Keeps code consistent and clean.
-- **Vitest**: A fast and lightweight testing framework, leveraging **workspaces** for monorepos.
+- **Vitest 3**: A fast and lightweight testing framework with built-in monorepo support.
 - **Pnpm**: Manages dependencies and workspaces efficiently.
 - **PandaCSS**: A utility-first CSS framework for design tokens and styling.
 - **Volta**: Ensures that all contributors use the same Node.js and package manager versions, reducing environment inconsistencies.
