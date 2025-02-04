@@ -96,6 +96,7 @@ While this means more manual setup, it also means you **understand exactly how y
 - **Vitest**: A fast and lightweight testing framework, leveraging **workspaces** for monorepos.
 - **Pnpm**: Manages dependencies and workspaces efficiently.
 - **PandaCSS**: A utility-first CSS framework for design tokens and styling.
+- **Volta**: Ensures that all contributors use the same Node.js and package manager versions, reducing environment inconsistencies.
 
 ## Configuration Summary
 
@@ -120,6 +121,12 @@ While this means more manual setup, it also means you **understand exactly how y
 
 - The `@urrepo/eslint-config` package provides a shared configuration.
 - Extend the base configuration in each package to include relevant rules.
+
+### Volta
+
+- Ensures that all developers use the same versions of **Node.js** and **pnpm**.
+- Defined in `package.json` under the `volta` key.
+- No need for manual setup—simply install [Volta](https://volta.sh/) and run **pnpm install**.
 
 ---
 
