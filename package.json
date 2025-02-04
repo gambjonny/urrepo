@@ -1,14 +1,14 @@
 {
   "name": "@urrepo/root",
   "version": "0.0.1",
-  "description": "a basic monorepo setup",
+  "description": "a monorepo setup",
   "scripts": {
-    "build:all": "tsc -b",
-    "test:all": "vitest run",
-    "coverage:all": "vitest run --coverage",
-    "format:all": "pnpm -r --no-bail run format:check",
-    "lint:all": "pnpm -r --no-bail run lint:check",
-    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
+    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
+    "build:all": "wireit",
+    "test:all": "wireit",
+    "coverage:all": "wireit",
+    "format:all": "wireit",
+    "lint:all": "wireit"
   },
   "keywords": [],
   "author": "Jonny Gamba",
@@ -39,6 +39,35 @@
     "eslint-plugin-prettier": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "wireit": "^0.14.10"
+  },
+  "wireit": {
+    "build:all": {
+      "dependencies": [
+        "./packages/preset:build"
+      ]
+    },
+    "test:all": {
+      "dependencies": [
+        "./packages/preset:test"
+      ]
+    },
+    "coverage:all": {
+      "dependencies": [
+        "./packages/preset:coverage"
+      ]
+    },
+    "format:all": {
+      "dependencies": [
+        "./packages/eslint-config:format:check",
+        "./packages/preset:format:check"
+      ]
+    },
+    "lint:all": {
+      "dependencies": [
+        "./packages/preset:lint:check"
+      ]
+    }
   }
 }

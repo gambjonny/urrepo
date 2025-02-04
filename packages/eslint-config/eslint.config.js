@@ -6,11 +6,13 @@ import prettierPlugin from 'eslint-plugin-prettier'
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'], // global ignore
+    name: 'global ignore',
+    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
   },
   pluginJs.configs.recommended,
   prettier,
   {
+    name: 'ts',
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parserOptions: {
@@ -19,6 +21,7 @@ export default [
     },
   },
   {
+    name: 'vitest',
     files: ['**/*.test.ts', '**/*.spec.ts'],
     plugins: {
       vitest,
@@ -33,6 +36,7 @@ export default [
     },
   },
   {
+    name: 'prettier',
     files: ['**/*.{js,jsx,ts,tsx,md}'],
     plugins: {
       prettier: prettierPlugin,

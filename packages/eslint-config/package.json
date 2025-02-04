@@ -5,11 +5,14 @@
   "description": "",
   "main": "eslint.config.js",
   "types": "index.d.ts",
+  "exports": {
+    "base": "./eslint.config.js",
+    "import": "./eslint.config.js",
+    "default": "./eslint.config.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint:check": "echo 'No linting needed for this package'",
-    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
-    "format:fix": "prettier --ignore-path ../../.prettierignore --write ."
+    "format:check": "wireit",
+    "format:fix": "wireit"
   },
   "keywords": [],
   "engines": {
@@ -27,5 +30,19 @@
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-prettier": "catalog:",
     "typescript": "catalog:"
+  },
+  "wireit": {
+    "format:check": {
+      "command": "prettier --ignore-path ../../.prettierignore --check .",
+      "files": [
+        "eslint.config.js"
+      ]
+    },
+    "format:fix": {
+      "command": "prettier --ignore-path ../../.prettierignore --write .",
+      "files": [
+        "eslint.config.js"
+      ]
+    }
   }
 }

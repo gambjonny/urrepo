@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "description": "core preset",
   "main": "src/index.ts",
+  "sideEffects": false,
   "keywords": [
     "panda-css",
     "preset",
@@ -11,13 +12,14 @@
     "styling"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "lint:check": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format:check": "prettier --ignore-path ../../.prettierignore --check .",
-    "format:fix": "prettier --ignore-path ../../.prettierignore --write ."
+    "build": "wireit",
+    "test": "wireit",
+    "test:watch": "vitest",
+    "coverage": "wireit",
+    "lint:check": "wireit",
+    "lint:fix": "wireit",
+    "format:check": "wireit",
+    "format:fix": "wireit"
   },
   "license": "ISC",
   "engines": {
@@ -43,5 +45,59 @@
     "@vitest/ui": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/eslint-plugin": "catalog:"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc",
+      "dependencies": [],
+      "files": [
+        "**/*.{ts,tsx,js,json}",
+        "*.config.*",
+        ".prettier*"
+      ],
+      "output": [
+        "dist/**"
+      ]
+    },
+    "test": {
+      "command": "vitest run",
+      "files": [
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "vitest.config.ts"
+      ]
+    },
+    "coverage": {
+      "command": "vitest run --coverage",
+      "dependencies": [
+        "test"
+      ]
+    },
+    "lint:check": {
+      "command": "eslint .",
+      "files": [
+        "src/**/*.ts",
+        "eslint.config.js"
+      ]
+    },
+    "lint:fix": {
+      "command": "eslint . --fix",
+      "files": [
+        "src/**/*.ts",
+        "eslint.config.js"
+      ]
+    },
+    "format:check": {
+      "command": "prettier --ignore-path ../../.prettierignore --check .",
+      "files": [
+        "src/**/*.ts"
+      ]
+    },
+    "format:fix": {
+      "command": "prettier --ignore-path ../../.prettierignore --write .",
+      "files": [
+        "src/**/*.ts"
+      ]
+    }
   }
 }

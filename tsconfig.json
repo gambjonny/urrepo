@@ -2,7 +2,8 @@
   "extends": "./tsconfig.base.json",
   "files": [],
   "references": [
-    { "path": "./packages/preset" }
+    { "path": "./packages/preset" },
+    { "path": "./packages/eslint-config" }
   ]
 }
 

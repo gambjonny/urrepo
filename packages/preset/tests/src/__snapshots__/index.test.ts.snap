@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PandaCSS Preset > matches the snapshot 1`] = `
+exports[`pandaCSS Preset > matches the snapshot 1`] = `
 {
   "name": "core",
   "theme": {
