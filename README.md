@@ -1,6 +1,6 @@
 # Urrepo
 
-Urrepo is a monorepo template built for projects that need consistency and organization. It uses a set of modern tools to make working with multiple packages straightforward and predictable.
+Urrepo is a monorepo template built for projects that need consistency and organization. It uses a set of modern tools to make working with multiple packages straightforward and predictable. Designed for frontend-heavy monorepos, Urrepo focuses on developer experience, performance, and maintainability by letting you configure your monorepo explicitly without unnecessary tooling.
 
 ## Rationale
 
@@ -63,6 +63,11 @@ While this means more manual setup, it also means you **understand exactly how y
 5. **Define Wireit Scripts**:
 
    - Add `wireit` configuration in the `package.json` for `build`, `test`, `lint`, and `format` scripts.
+
+6. **Set Up Vitest**:
+
+   - Add a `vitest.config.ts` file to the package.
+   - Use `defineProject` instead of `defineConfig` to avoid workspace conflicts.
 
 ### Scripts
 
@@ -128,7 +133,6 @@ While this means more manual setup, it also means you **understand exactly how y
 
 - Uses **Vitest 3**, which includes **first-class support for monorepos**.
 - Each package should have its own **vitest.config.ts** file.
-- Use `defineProject` instead of `defineConfig` to avoid workspace conflicts.
 
 ### Volta
 
