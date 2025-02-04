@@ -119,8 +119,16 @@ While this means more manual setup, it also means you **understand exactly how y
 
 ### ESLint
 
+- Uses **Flat Config**, the new recommended `ESLint` configuration format.
 - The `@urrepo/eslint-config` package provides a shared configuration.
-- Extend the base configuration in each package to include relevant rules.
+- Includes **TypeScript-ESLint** for static type-aware linting.
+- Configures **Vitest's ESLint rules** to enforce best practices in test files.
+
+### Vitest
+
+- Uses **Vitest 3**, which includes **first-class support for monorepos**.
+- Each package should have its own **vitest.config.ts** file.
+- Use `defineProject` instead of `defineConfig` to avoid workspace conflicts.
 
 ### Volta
 
