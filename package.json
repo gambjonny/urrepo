@@ -10,7 +10,11 @@
     "format:all": "wireit",
     "lint:all": "wireit"
   },
-  "keywords": [],
+  "keywords": [
+    "monorepo",
+    "pnpm-workspaces",
+    "wireit"
+  ],
   "author": "Jonny Gamba",
   "license": "ISC",
   "engines": {
