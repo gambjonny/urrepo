@@ -69,7 +69,3 @@ Urrepo is a monorepo template built for projects that need consistency and organ
 - **Vitest**: A fast and lightweight testing framework.
 - **Pnpm**: Manages dependencies and workspaces efficiently.
 - **PandaCSS**: A utility-first CSS framework for design tokens and styling.
-
----
-
-Urrepo is designed to keep your monorepo manageable without unnecessary complexity. Use the provided tools and configurations to get your projects running smoothly.
