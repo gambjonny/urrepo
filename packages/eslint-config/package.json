@@ -25,6 +25,7 @@
   "peerDependencies": {
     "eslint": "catalog:",
     "@eslint/js": "catalog:",
+    "typescript-eslint": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
     "prettier": "catalog:",
     "eslint-config-prettier": "catalog:",

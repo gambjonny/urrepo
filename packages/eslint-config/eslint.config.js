@@ -1,15 +1,30 @@
-import pluginJs from '@eslint/js'
+import eslintjs from '@eslint/js'
+import eslintts from 'typescript-eslint'
 import vitest from '@vitest/eslint-plugin'
 import prettier from 'eslint-config-prettier'
 import prettierPlugin from 'eslint-plugin-prettier'
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
+export default eslintts.config(
   {
     name: 'global ignore',
     ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
   },
-  pluginJs.configs.recommended,
+  eslintjs.configs.recommended,
+  eslintts.configs.strictTypeChecked,
+  eslintts.configs.stylisticTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
+    files: ['**/*.js'],
+    extends: [eslintts.configs.disableTypeChecked],
+  },
   prettier,
   {
     name: 'ts',
@@ -45,4 +60,4 @@ export default [
       'prettier/prettier': 'error',
     },
   },
-]
+)
