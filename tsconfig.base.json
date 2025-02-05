@@ -16,7 +16,8 @@
     "skipLibCheck": true,
     "declaration": true,
     "declarationMap": true,
-    "types": ["vitest/globals"]
+    "types": ["@total-typescript/ts-reset", "vitest/globals"]
   },
+  "include": ["reset.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

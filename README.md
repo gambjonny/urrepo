@@ -8,7 +8,6 @@ Most existing monorepo solutions, like **Nx** and **Turborepo**, are designed wi
 
 - **Abstract too much**: They introduce proprietary configurations and wrapper commands that make it harder to understand what’s actually happening under the hood.
 - **Encourage heavy dependencies**: Many setups include caching servers, remote execution layers, and proprietary features that aren’t necessary for most projects.
-- **Are built for commercial gain**: Turborepo, for example, started as an open-source project but quickly introduced paid features, making companies dependent on Vercel’s infrastructure.
 - **Follow a “batteries-included” approach**: Many tools try to automate everything, reducing the need for developers to configure their monorepo explicitly. While this can be useful for large teams, it often results in a lack of flexibility and forces developers into rigid workflows.
 
 Urrepo exists because **monorepos don’t need to be complicated**. It provides a lightweight, dependency-free alternative that leverages native tooling like **pnpm workspaces, TypeScript project references, and Wireit**. This makes it:
@@ -30,8 +29,8 @@ While this means more manual setup, it also means you **understand exactly how y
 
 ## Features
 
-- **TypeScript Project References**: Every package extends a shared `tsconfig.base.json` and uses `composite: true` for incremental builds.
 - **Wireit for Automation**: Handles dependencies and caching for scripts like building, testing, and linting.
+- **TypeScript**: Every package extends a shared `tsconfig.base.json`, uses `composite: true` for incremental builds, and benefits from **ts-reset** for improved type inference.
 - **Centralized ESLint and Prettier Configs**: The `@urrepo/eslint-config` package provides a reusable setup for linting and formatting.
 - **Testing with Vitest 3**: Thanks to **Vitest’s built-in monorepo support**, tests run efficiently across packages while keeping configurations explicit.
 - **Pnpm Workspaces**: Keeps dependencies organized and ensures easy linking across packages.
