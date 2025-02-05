@@ -22,7 +22,7 @@
   "volta": {
     "extends": "../../package.json"
   },
-  "devDependencies": {
+  "dependencies": {
     "eslint": "catalog:",
     "@eslint/js": "catalog:",
     "typescript-eslint": "catalog:",

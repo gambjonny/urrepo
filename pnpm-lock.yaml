@@ -97,7 +97,7 @@ importers:
         version: 0.14.10
 
   packages/eslint-config:
-    devDependencies:
+    dependencies:
       '@eslint/js':
         specifier: 'catalog:'
         version: 9.19.0
@@ -128,43 +128,22 @@ importers:
       '@pandacss/dev':
         specifier: 'catalog:'
         version: 0.51.1(typescript@5.7.3)
-      '@urrepo/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
     devDependencies:
-      '@eslint/js':
-        specifier: 'catalog:'
-        version: 9.19.0
       '@types/node':
         specifier: 'catalog:'
         version: 22.10.7
+      '@urrepo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@vitest/coverage-v8':
         specifier: 'catalog:'
         version: 3.0.3(vitest@3.0.3)
-      '@vitest/eslint-plugin':
-        specifier: 'catalog:'
-        version: 1.1.25(@typescript-eslint/utils@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.3)
       '@vitest/ui':
         specifier: 'catalog:'
         version: 3.0.3(vitest@3.0.3)
-      eslint:
-        specifier: 'catalog:'
-        version: 9.19.0(jiti@2.4.2)
-      eslint-config-prettier:
-        specifier: 'catalog:'
-        version: 10.0.1(eslint@9.19.0(jiti@2.4.2))
-      eslint-plugin-prettier:
-        specifier: 'catalog:'
-        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(prettier@3.4.2)
-      prettier:
-        specifier: 'catalog:'
-        version: 3.4.2
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
-      typescript-eslint:
-        specifier: 'catalog:'
-        version: 8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       vitest:
         specifier: 'catalog:'
         version: 3.0.3(@types/node@22.10.7)(@vitest/ui@3.0.3)(jiti@2.4.2)(lightningcss@1.25.1)

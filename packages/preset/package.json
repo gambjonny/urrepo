@@ -29,22 +29,13 @@
   "volta": {
     "extends": "../../package.json"
   },
-  "dependencies": {
-    "@urrepo/eslint-config": "workspace:*"
-  },
   "devDependencies": {
-    "@types/node": "catalog:",
+    "@urrepo/eslint-config": "workspace:*",
     "typescript": "catalog:",
-    "eslint": "catalog:",
-    "@eslint/js": "catalog:",
-    "typescript-eslint": "catalog:",
-    "prettier": "catalog:",
-    "eslint-config-prettier": "catalog:",
-    "eslint-plugin-prettier": "catalog:",
+    "@types/node": "catalog:",
     "vitest": "catalog:",
     "@vitest/ui": "catalog:",
-    "@vitest/coverage-v8": "catalog:",
-    "@vitest/eslint-plugin": "catalog:"
+    "@vitest/coverage-v8": "catalog:"
   },
   "peerDependencies": {
     "@pandacss/dev": "catalog:"
