@@ -23,14 +23,15 @@
     "extends": "../../package.json"
   },
   "dependencies": {
-    "eslint": "catalog:",
     "@eslint/js": "catalog:",
-    "typescript-eslint": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
-    "prettier": "catalog:",
+    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
+    "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-prettier": "catalog:",
-    "typescript": "catalog:"
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   },
   "wireit": {
     "format:check": {

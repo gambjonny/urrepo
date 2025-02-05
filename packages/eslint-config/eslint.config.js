@@ -1,6 +1,7 @@
 import eslintjs from '@eslint/js'
 import eslintts from 'typescript-eslint'
 import vitest from '@vitest/eslint-plugin'
+import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import prettier from 'eslint-config-prettier'
 import prettierPlugin from 'eslint-plugin-prettier'
 
@@ -11,6 +12,7 @@ export default eslintts.config(
     ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
   },
   eslintjs.configs.recommended,
+  comments.recommended,
   eslintts.configs.strictTypeChecked,
   eslintts.configs.stylisticTypeChecked,
   {
