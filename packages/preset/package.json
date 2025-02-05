@@ -32,8 +32,7 @@
   "dependencies": {
     "@urrepo/eslint-config": "workspace:*"
   },
-  "peerDependencies": {
-    "@pandacss/dev": "catalog:",
+  "devDependencies": {
     "@types/node": "catalog:",
     "typescript": "catalog:",
     "eslint": "catalog:",
@@ -46,6 +45,9 @@
     "@vitest/ui": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/eslint-plugin": "catalog:"
+  },
+  "peerDependencies": {
+    "@pandacss/dev": "catalog:"
   },
   "wireit": {
     "build": {
@@ -93,14 +95,14 @@
       "command": "prettier --ignore-path ../../.prettierignore --check .",
       "files": [
         "src/**/*.ts",
-        "tests**/*.ts",
+        "tests**/*.ts"
       ]
     },
     "format:fix": {
       "command": "prettier --ignore-path ../../.prettierignore --write .",
       "files": [
         "src/**/*.ts",
-        "tests/**/*.ts",
+        "tests/**/*.ts"
       ]
     }
   }
