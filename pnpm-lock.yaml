@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    '@eslint-community/eslint-plugin-eslint-comments':
+      specifier: ^4.4.1
+      version: 4.4.1
     '@eslint/js':
       specifier: ^9.19.0
       version: 9.19.0
@@ -56,6 +59,9 @@ importers:
       '@pandacss/dev':
         specifier: 'catalog:'
         version: 0.51.1(typescript@5.7.3)
+      '@total-typescript/ts-reset':
+        specifier: ^0.6.1
+        version: 0.6.1
       '@types/node':
         specifier: 'catalog:'
         version: 22.10.7
@@ -95,6 +101,9 @@ importers:
 
   packages/eslint-config:
     dependencies:
+      '@eslint-community/eslint-plugin-eslint-comments':
+        specifier: 'catalog:'
+        version: 4.4.1(eslint@9.19.0(jiti@2.4.2))
       '@eslint/js':
         specifier: 'catalog:'
         version: 9.19.0
@@ -116,15 +125,16 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
+      typescript-eslint:
+        specifier: 'catalog:'
+        version: 8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
 
   packages/preset:
     dependencies:
-      '@eslint/js':
-        specifier: 'catalog:'
-        version: 9.19.0
       '@pandacss/dev':
         specifier: 'catalog:'
         version: 0.51.1(typescript@5.7.3)
+    devDependencies:
       '@types/node':
         specifier: 'catalog:'
         version: 22.10.7
@@ -134,24 +144,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 'catalog:'
         version: 3.0.3(vitest@3.0.3)
-      '@vitest/eslint-plugin':
-        specifier: 'catalog:'
-        version: 1.1.25(@typescript-eslint/utils@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.3)
       '@vitest/ui':
         specifier: 'catalog:'
         version: 3.0.3(vitest@3.0.3)
-      eslint:
-        specifier: 'catalog:'
-        version: 9.19.0(jiti@2.4.2)
-      eslint-config-prettier:
-        specifier: 'catalog:'
-        version: 10.0.1(eslint@9.19.0(jiti@2.4.2))
-      eslint-plugin-prettier:
-        specifier: 'catalog:'
-        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(prettier@3.4.2)
-      prettier:
-        specifier: 'catalog:'
-        version: 3.4.2
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -494,6 +489,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@eslint-community/eslint-plugin-eslint-comments@4.4.1':
+    resolution: {integrity: sha512-lb/Z/MzbTf7CaVYM9WCFNQZ4L1yi3ev2fsFPF99h31ljhSEyUoyEsKsNWiU+qD1glbYTDJdqgyaLKtyTkkqtuQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+
   '@eslint-community/eslint-utils@4.4.1':
     resolution: {integrity: sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -740,6 +741,9 @@ packages:
     resolution: {integrity: sha512-ul8rnCsUumNln5YWwz0ted2ZHFhzhRRnkpBZ+YRuHoRAlUji9KChpOUOndY7uykrPEPXVbHLlsdo6v5yXo/TXw==}
     cpu: [x64]
     os: [win32]
+
+  '@total-typescript/ts-reset@0.6.1':
+    resolution: {integrity: sha512-cka47fVSo6lfQDIATYqb/vO1nvFfbPw7uWLayIXIhGETj0wcOOlrlkobOMDNQOFr9QOafegUPq13V2+6vtD7yg==}
 
   '@ts-morph/common@0.25.0':
     resolution: {integrity: sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==}
@@ -2165,6 +2169,12 @@ snapshots:
   '@esbuild/win32-x64@0.24.2':
     optional: true
 
+  '@eslint-community/eslint-plugin-eslint-comments@4.4.1(eslint@9.19.0(jiti@2.4.2))':
+    dependencies:
+      escape-string-regexp: 4.0.0
+      eslint: 9.19.0(jiti@2.4.2)
+      ignore: 5.3.2
+
   '@eslint-community/eslint-utils@4.4.1(eslint@9.19.0(jiti@2.4.2))':
     dependencies:
       eslint: 9.19.0(jiti@2.4.2)
@@ -2491,6 +2501,8 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.31.0':
     optional: true
+
+  '@total-typescript/ts-reset@0.6.1': {}
 
   '@ts-morph/common@0.25.0':
     dependencies:

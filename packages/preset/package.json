@@ -29,23 +29,16 @@
   "volta": {
     "extends": "../../package.json"
   },
-  "dependencies": {
-    "@urrepo/eslint-config": "workspace:*"
-  },
-  "peerDependencies": {
-    "@pandacss/dev": "catalog:",
-    "@types/node": "catalog:",
+  "devDependencies": {
+    "@urrepo/eslint-config": "workspace:*",
     "typescript": "catalog:",
-    "eslint": "catalog:",
-    "@eslint/js": "catalog:",
-    "typescript-eslint": "catalog:",
-    "prettier": "catalog:",
-    "eslint-config-prettier": "catalog:",
-    "eslint-plugin-prettier": "catalog:",
+    "@types/node": "catalog:",
     "vitest": "catalog:",
     "@vitest/ui": "catalog:",
-    "@vitest/coverage-v8": "catalog:",
-    "@vitest/eslint-plugin": "catalog:"
+    "@vitest/coverage-v8": "catalog:"
+  },
+  "peerDependencies": {
+    "@pandacss/dev": "catalog:"
   },
   "wireit": {
     "build": {
@@ -93,14 +86,14 @@
       "command": "prettier --ignore-path ../../.prettierignore --check .",
       "files": [
         "src/**/*.ts",
-        "tests**/*.ts",
+        "tests**/*.ts"
       ]
     },
     "format:fix": {
       "command": "prettier --ignore-path ../../.prettierignore --write .",
       "files": [
         "src/**/*.ts",
-        "tests/**/*.ts",
+        "tests/**/*.ts"
       ]
     }
   }
