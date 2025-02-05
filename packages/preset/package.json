@@ -53,8 +53,7 @@
       "dependencies": [],
       "files": [
         "**/*.{ts,tsx,js,json}",
-        "*.config.*",
-        ".prettier*"
+        "*.config.*"
       ],
       "output": [
         "dist/**"
