@@ -29,15 +29,6 @@ export default eslintts.config(
   },
   prettier,
   {
-    name: 'ts',
-    files: ['**/*.ts', '**/*.tsx'],
-    languageOptions: {
-      parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
-  },
-  {
     name: 'vitest',
     files: ['**/*.test.ts', '**/*.spec.ts'],
     plugins: {
