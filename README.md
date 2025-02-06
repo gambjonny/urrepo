@@ -138,7 +138,3 @@ While this means more manual setup, it also means you **understand exactly how y
 - Ensures that all developers use the same versions of **Node.js** and **pnpm**.
 - Defined in `package.json` under the `volta` key.
 - No need for manual setup—simply install [Volta](https://volta.sh/) and run **pnpm install**.
-
----
-
-The key takeaway is that Urrepo does not assume how you want to structure your monorepo. Instead, it gives you the tools to configure it explicitly, making it a good choice for developers who value clarity over automation.
