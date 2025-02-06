@@ -55,14 +55,10 @@
       ]
     },
     "test:all": {
-      "dependencies": [
-        "./packages/preset:test"
-      ]
+      "command": "vitest --run"
     },
     "coverage:all": {
-      "dependencies": [
-        "./packages/preset:coverage"
-      ]
+      "command": "vitest run --coverage"
     },
     "format:all": {
       "dependencies": [
