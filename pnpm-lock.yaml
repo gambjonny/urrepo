@@ -171,6 +171,10 @@ importers:
       '@urrepo/preset':
         specifier: workspace:*
         version: link:../preset
+    devDependencies:
+      '@urrepo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
 
   packages/ui:
     dependencies:
@@ -184,6 +188,9 @@ importers:
       '@types/react-dom':
         specifier: 'catalog:'
         version: 19.0.3(@types/react@19.0.8)
+      '@urrepo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       react:
         specifier: 'catalog:'
         version: 19.0.0
