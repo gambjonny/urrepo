@@ -1,5 +1,5 @@
 {
-  "name": "@mono/styled-system",
+  "name": "@urrepo/styled-system",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -40,4 +40,3 @@
     "./styles.css": "./dist/styles.css"
   }
 }
-
