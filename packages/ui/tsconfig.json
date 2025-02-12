@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*", "tests/**/*", "vitest.config.ts"],
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": "."
+  },
+  "references": [
+    { "path": "../styled-system/" },
+    { "path": "../eslint-config/" },
+  ]
+}
