@@ -13,7 +13,12 @@
     "@urrepo/preset": "workspace:*"
   },
   "devDependencies": {
-    "@urrepo/eslint-config": "workspace:*"
+    "@urrepo/eslint-config": "workspace:*",
+    "@pandacss/dev": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "exports": {
     "./css": {
