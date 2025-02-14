@@ -8,19 +8,19 @@ const preset = definePreset({
         colors: {
           cobalt: {
             50: {
-              value: '#EBEDF9',
+              value: '#ebedf9',
             },
             100: {
-              value: '#D3D7EE',
+              value: '#ebedf9',
             },
             200: {
-              value: '#959CDE',
+              value: '#ebedf9',
             },
             300: {
-              value: '#5460C8',
+              value: '#ebedf9',
             },
             400: {
-              value: '#1020B9',
+              value: '#ebedf9',
             },
           },
         },

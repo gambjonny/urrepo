@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*", "panda.config.ts"],
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": "."
+  },
+  "references": [
+    {"path": "../preset/"},
+    {"path": "../eslint-config/"}
+  ]
+}

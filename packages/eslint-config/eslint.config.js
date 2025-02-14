@@ -9,7 +9,7 @@ import prettierPlugin from 'eslint-plugin-prettier'
 export default eslintts.config(
   {
     name: 'global ignore',
-    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
+    ignores: ['**/coverage/', '**/dist/'],
   },
   eslintjs.configs.recommended,
   comments.recommended,
@@ -20,6 +20,7 @@ export default eslintts.config(
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
+        allowDefaultProject: true,
       },
     },
   },
@@ -45,7 +46,7 @@ export default eslintts.config(
   },
   {
     name: 'prettier',
-    files: ['**/*.{js,jsx,ts,tsx,md}'],
+    files: ['*.{js,jsx,ts,tsx,md}', '**/*.{js,jsx,ts,tsx,md}'],
     plugins: {
       prettier: prettierPlugin,
     },

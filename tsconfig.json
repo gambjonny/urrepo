@@ -3,7 +3,8 @@
   "files": [],
   "references": [
     { "path": "./packages/preset" },
-    { "path": "./packages/eslint-config" }
+    { "path": "./packages/eslint-config" },
+    { "path": "./packages/styled-system" },
+    { "path": "./packages/ui" }
   ]
 }
-
