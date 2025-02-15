@@ -9,7 +9,7 @@ import prettierPlugin from 'eslint-plugin-prettier'
 export default eslintts.config(
   {
     name: 'global ignore',
-    ignores: ['**/coverage/', '**/dist/', '**/styled-system/'],
+    ignores: ['**/coverage/', '**/dist/'],
   },
   eslintjs.configs.recommended,
   comments.recommended,

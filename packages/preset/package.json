@@ -34,7 +34,7 @@
     "@urrepo/eslint-config": "workspace:*",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/ui": "catalog:",
-    "jiti": "^2.4.2",
+    "jiti": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
