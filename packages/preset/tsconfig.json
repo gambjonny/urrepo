@@ -5,5 +5,8 @@
     "composite": true,
     "noEmit": true,
     "baseUrl": "."
-  }
+  },
+  "references": [
+    { "path": "../eslint-config/" }
+  ]
 }
