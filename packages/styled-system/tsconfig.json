@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*", "eslint.config.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "baseUrl": "."
+  },
+  "references": [
+    { "path": "../eslint-config/" }
+  ]
+}
