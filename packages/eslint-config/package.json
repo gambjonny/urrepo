@@ -6,9 +6,9 @@
   "main": "eslint.config.js",
   "types": "index.d.ts",
   "exports": {
-    "base": "./eslint.config.js",
-    "import": "./eslint.config.js",
-    "default": "./eslint.config.js"
+    "base": "./eslint.config.ts",
+    "import": "./eslint.config.ts",
+    "default": "./eslint.config.ts"
   },
   "scripts": {
     "format:check": "wireit",
@@ -23,9 +23,9 @@
     "extends": "../../package.json"
   },
   "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
     "@eslint/js": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
-    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-prettier": "catalog:",
@@ -43,8 +43,11 @@
     "format:fix": {
       "command": "prettier --ignore-path ../../.prettierignore --write .",
       "files": [
-        "eslint.config.js"
+        "eslint.config.ts"
       ]
     }
+  },
+  "devDependencies": {
+    "jiti": "^2.4.2"
   }
 }

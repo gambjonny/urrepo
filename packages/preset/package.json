@@ -30,12 +30,13 @@
     "extends": "../../package.json"
   },
   "devDependencies": {
-    "@urrepo/eslint-config": "workspace:*",
-    "typescript": "catalog:",
     "@types/node": "catalog:",
-    "vitest": "catalog:",
+    "@urrepo/eslint-config": "workspace:*",
+    "@vitest/coverage-v8": "catalog:",
     "@vitest/ui": "catalog:",
-    "@vitest/coverage-v8": "catalog:"
+    "jiti": "^2.4.2",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "@pandacss/dev": "catalog:"
@@ -71,7 +72,7 @@
       "files": [
         "src/**/*.ts",
         "tests/**/*.ts",
-        "eslint.config.js"
+        "eslint.config.ts"
       ]
     },
     "lint:fix": {
@@ -79,7 +80,7 @@
       "files": [
         "src/**/*.ts",
         "tests/**/*.ts",
-        "eslint.config.js"
+        "eslint.config.ts"
       ]
     },
     "format:check": {
