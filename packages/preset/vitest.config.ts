@@ -5,8 +5,5 @@ export default defineProject({
     name: 'package: Panda preset',
     globals: true,
     environment: 'node',
-    //coverage: {
-    //  reportsDirectory: '../../coverage/preset',
-    //}
   },
 })

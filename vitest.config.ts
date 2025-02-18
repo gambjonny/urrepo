@@ -6,6 +6,7 @@ export default defineConfig({
     reporters: process.env.GITHUB_ACTIONS ? ['dot', 'github-actions'] : ['dot'],
     coverage: {
       reportsDirectory: './coverage',
-    }
+      exclude: ['**/styled-system/**', ...coverageConfigDefaults.exclude],
+    },
   },
 })
