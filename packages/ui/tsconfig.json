@@ -6,6 +6,7 @@
     "baseUrl": "."
   },
   "references": [
-    { "path": "../eslint-config/" }
+    { "path": "../eslint-config/" },
+    { "path": "../styled-system/" }
   ]
 }
