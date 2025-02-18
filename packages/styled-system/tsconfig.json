@@ -1,9 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*", "eslint.config.ts", "panda.config.ts"],
+  "include": ["src/**/*", "eslint.config.ts", "panda.config.js"],
   "compilerOptions": {
     "composite": true,
-    "noEmit": true,
     "baseUrl": ".",
     "jsx": "react-jsx"
   },

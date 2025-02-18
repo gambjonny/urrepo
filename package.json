@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
     "reinstall": "wireit",
+    "build:project": "tsc -b",
     "build:all": "wireit",
     "test:all": "wireit",
     "coverage:all": "wireit",

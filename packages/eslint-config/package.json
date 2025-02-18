@@ -6,9 +6,8 @@
   "main": "eslint.config.js",
   "types": "index.d.ts",
   "exports": {
-    "base": "./eslint.config.ts",
-    "import": "./eslint.config.ts",
-    "default": "./eslint.config.ts"
+    "base": "./eslint.config.js",
+    "import": "./eslint.config.js"
   },
   "scripts": {
     "format:check": "wireit",
@@ -43,12 +42,11 @@
     "format:fix": {
       "command": "prettier --ignore-path ../../.prettierignore --write .",
       "files": [
-        "eslint.config.ts"
+        "eslint.config.js"
       ]
     }
   },
   "devDependencies": {
-    "globals": "^15.15.0",
-    "jiti": "^2.4.2"
+    "globals": "^15.15.0"
   }
 }

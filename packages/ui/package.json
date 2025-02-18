@@ -19,7 +19,6 @@
   "devDependencies": {
     "@urrepo/eslint-config": "workspace:*",
     "@types/node": "catalog:",
-    "jiti": "catalog:",
     "typescript": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
