@@ -4,6 +4,7 @@
   "description": "a monorepo setup",
   "scripts": {
     "clean": "find ./ -name node_modules -type d -exec rm -rf {} +",
+    "reinstall": "wireit",
     "build:all": "wireit",
     "test:all": "wireit",
     "coverage:all": "wireit",
@@ -46,9 +47,15 @@
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "vitest": "catalog:",
-    "wireit": "^0.14.10"
+    "wireit": "^0.14.11"
   },
   "wireit": {
+    "reinstall": {
+      "command": "pnpm i",
+      "dependencies": [
+        "clean"
+      ]
+    },
     "build:all": {
       "dependencies": [
         "./packages/preset:build"
