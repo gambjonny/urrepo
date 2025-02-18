@@ -33,9 +33,10 @@
     "@urrepo/eslint-config": "workspace:*",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/ui": "catalog:",
-    "jiti": "catalog:",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:"
   },
   "peerDependencies": {
     "@pandacss/dev": "catalog:"
@@ -71,7 +72,7 @@
       "files": [
         "src/**/*.ts",
         "tests/**/*.ts",
-        "eslint.config.ts"
+        "eslint.config.js"
       ]
     },
     "lint:fix": {
@@ -79,7 +80,7 @@
       "files": [
         "src/**/*.ts",
         "tests/**/*.ts",
-        "eslint.config.ts"
+        "eslint.config.js"
       ]
     },
     "format:check": {

@@ -6,15 +6,15 @@ settings:
 
 catalogs:
   default:
-    '@eslint-community/eslint-plugin-eslint-comments':
-      specifier: ^4.4.1
-      version: 4.4.1
     '@eslint/js':
       specifier: ^9.20.0
       version: 9.20.0
     '@pandacss/dev':
       specifier: ^0.51.1
       version: 0.51.1
+    '@types/eslint-config-prettier':
+      specifier: ^6.11.3
+      version: 6.11.3
     '@types/node':
       specifier: ^22.13.4
       version: 22.13.4
@@ -42,9 +42,6 @@ catalogs:
     eslint-plugin-prettier:
       specifier: ^5.2.3
       version: 5.2.3
-    jiti:
-      specifier: ^2.4.2
-      version: 2.4.2
     prettier:
       specifier: ^3.5.1
       version: 3.5.1
@@ -116,12 +113,12 @@ importers:
 
   packages/eslint-config:
     dependencies:
-      '@eslint-community/eslint-plugin-eslint-comments':
-        specifier: 'catalog:'
-        version: 4.4.1(eslint@9.20.1(jiti@2.4.2))
       '@eslint/js':
         specifier: 'catalog:'
         version: 9.20.0
+      '@types/eslint-config-prettier':
+        specifier: 'catalog:'
+        version: 6.11.3
       '@vitest/eslint-plugin':
         specifier: 'catalog:'
         version: 1.1.31(@typescript-eslint/utils@8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.6)
@@ -144,9 +141,9 @@ importers:
         specifier: 'catalog:'
         version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
     devDependencies:
-      jiti:
-        specifier: ^2.4.2
-        version: 2.4.2
+      globals:
+        specifier: ^15.15.0
+        version: 15.15.0
 
   packages/preset:
     dependencies:
@@ -157,6 +154,12 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.13.4
+      '@types/react':
+        specifier: 'catalog:'
+        version: 19.0.10
+      '@types/react-dom':
+        specifier: 'catalog:'
+        version: 19.0.4(@types/react@19.0.10)
       '@urrepo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -166,9 +169,6 @@ importers:
       '@vitest/ui':
         specifier: 'catalog:'
         version: 3.0.6(vitest@3.0.6)
-      jiti:
-        specifier: 'catalog:'
-        version: 2.4.2
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -191,9 +191,6 @@ importers:
       '@urrepo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      jiti:
-        specifier: 'catalog:'
-        version: 2.4.2
       typescript:
         specifier: 'catalog:'
         version: 5.7.3
@@ -222,9 +219,6 @@ importers:
       '@urrepo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      jiti:
-        specifier: 'catalog:'
-        version: 2.4.2
       react:
         specifier: 'catalog:'
         version: 19.0.0
@@ -570,12 +564,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@eslint-community/eslint-plugin-eslint-comments@4.4.1':
-    resolution: {integrity: sha512-lb/Z/MzbTf7CaVYM9WCFNQZ4L1yi3ev2fsFPF99h31ljhSEyUoyEsKsNWiU+qD1glbYTDJdqgyaLKtyTkkqtuQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
-
   '@eslint-community/eslint-utils@4.4.1':
     resolution: {integrity: sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -832,6 +820,9 @@ packages:
 
   '@ts-morph/common@0.25.0':
     resolution: {integrity: sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==}
+
+  '@types/eslint-config-prettier@6.11.3':
+    resolution: {integrity: sha512-3wXCiM8croUnhg9LdtZUJQwNcQYGWxxdOWDjPe1ykCqJFPVpzAKfs/2dgSoCtAvdPeaponcWPI7mPcGGp9dkKQ==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -1344,6 +1335,10 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+
+  globals@15.15.0:
+    resolution: {integrity: sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==}
     engines: {node: '>=18'}
 
   graceful-fs@4.2.11:
@@ -2298,12 +2293,6 @@ snapshots:
   '@esbuild/win32-x64@0.24.2':
     optional: true
 
-  '@eslint-community/eslint-plugin-eslint-comments@4.4.1(eslint@9.20.1(jiti@2.4.2))':
-    dependencies:
-      escape-string-regexp: 4.0.0
-      eslint: 9.20.1(jiti@2.4.2)
-      ignore: 5.3.2
-
   '@eslint-community/eslint-utils@4.4.1(eslint@9.20.1(jiti@2.4.2))':
     dependencies:
       eslint: 9.20.1(jiti@2.4.2)
@@ -2642,6 +2631,8 @@ snapshots:
       minimatch: 9.0.5
       path-browserify: 1.0.1
       tinyglobby: 0.2.10
+
+  '@types/eslint-config-prettier@6.11.3': {}
 
   '@types/estree@1.0.6': {}
 
@@ -3251,6 +3242,8 @@ snapshots:
 
   globals@14.0.0: {}
 
+  globals@15.15.0: {}
+
   graceful-fs@4.2.11: {}
 
   graphemer@1.4.0: {}
@@ -3317,7 +3310,8 @@ snapshots:
 
   javascript-stringify@2.1.0: {}
 
-  jiti@2.4.2: {}
+  jiti@2.4.2:
+    optional: true
 
   js-yaml@4.1.0:
     dependencies:

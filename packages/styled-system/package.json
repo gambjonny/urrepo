@@ -22,7 +22,6 @@
   "devDependencies": {
     "@types/node": "catalog:",
     "@urrepo/eslint-config": "workspace:*",
-    "jiti": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
@@ -58,4 +57,3 @@
     "./styles.css": "./dist/styles.css"
   }
 }
-
