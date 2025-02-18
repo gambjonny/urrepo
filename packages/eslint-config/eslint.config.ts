@@ -1,25 +1,27 @@
 import eslintjs from '@eslint/js'
 import eslintts from 'typescript-eslint'
 import vitest from '@vitest/eslint-plugin'
-import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import prettier from 'eslint-config-prettier'
 import prettierPlugin from 'eslint-plugin-prettier'
+import globals from 'globals'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default eslintts.config(
   {
     name: 'global ignore',
-    ignores: ['**/coverage/', '**/dist/'],
+    ignores: ['**/coverage/', '**/dist/', '**/*.md'],
   },
   eslintjs.configs.recommended,
-  comments.recommended,
   eslintts.configs.strictTypeChecked,
   eslintts.configs.stylisticTypeChecked,
   {
     languageOptions: {
+      globals: {
+        ...globals.node,
+      },
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: process.cwd(),
       },
     },
   },

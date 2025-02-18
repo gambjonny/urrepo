@@ -23,8 +23,8 @@
     "extends": "../../package.json"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
     "@eslint/js": "catalog:",
+    "@types/eslint-config-prettier": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
@@ -48,6 +48,7 @@
     }
   },
   "devDependencies": {
+    "globals": "^15.15.0",
     "jiti": "^2.4.2"
   }
 }
